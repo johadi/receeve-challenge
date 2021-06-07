@@ -1,0 +1,30 @@
+{
+  "name": "receeve-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node dist/index.js",
+    "start:dev": "npm run build:dev && node dist/index.js",
+    "build": "./node_modules/.bin/tsc && npm run install-packages",
+    "build:dev": "./node_modules/.bin/tsc",
+    "install-packages": "cp ./package.json ./dist && cd ./dist && npm install --production",
+    "test": "jest --verbose --colors"
+  },
+  "author": "Jimoh Hadi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.77",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.1",
+    "aws-lambda": "^1.0.6",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.2",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.17.0",
+    "@aws-sdk/client-sns": "^3.18.0",
+    "moment": "^2.29.1"
+  }
+}
