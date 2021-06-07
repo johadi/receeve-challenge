@@ -1,6 +1,6 @@
 # Receeve Code Challenge
 
-## About the project
+## About the code challenge
 Produce a code for a Lambda in AWS that receives Mailgun events via API Gateway.
 The Lambda should store the raw webhook and publish a transformed version into SNS.
 

@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node dist/index.js",
-    "start:dev": "npm run build:dev && node dist/index.js",
     "build": "./node_modules/.bin/tsc && npm run install-packages",
-    "build:dev": "./node_modules/.bin/tsc",
     "install-packages": "cp ./package.json ./dist && cd ./dist && npm install --production",
     "test": "jest --verbose --colors"
   },
